@@ -1,0 +1,202 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 65011712 bytes for Failed to commit area from 0x00000000c3c00000 to 0x00000000c7a00000 of length 65011712.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3315), pid=15432, tid=16728
+#
+# JRE version:  (14.0.2+12) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14.0.2+12-46, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=C:\Users\dell\OneDrive\Documents\NetBeansProjects\SimpleQuiz\build\classes simplequiz.SimpleQuiz
+
+Host: Intel(R) Core(TM) i3-10110U CPU @ 2.10GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1466)
+Time: Tue Feb  8 16:51:02 2022 India Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000017ccd018800):  JavaThread "Unknown thread" [_thread_in_vm, id=16728, stack(0x0000005a7f500000,0x0000005a7f600000)]
+
+Stack: [0x0000005a7f500000,0x0000005a7f600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f8a9a]
+V  [jvm.dll+0x74247a]
+V  [jvm.dll+0x743c2f]
+V  [jvm.dll+0x744273]
+V  [jvm.dll+0x20d288]
+V  [jvm.dll+0x5f5dea]
+V  [jvm.dll+0x5eac45]
+V  [jvm.dll+0x2c7e9c]
+V  [jvm.dll+0x2c7cd2]
+V  [jvm.dll+0x2cdbbc]
+V  [jvm.dll+0x313fe8]
+V  [jvm.dll+0x313710]
+V  [jvm.dll+0x2a092a]
+V  [jvm.dll+0x2a1a79]
+V  [jvm.dll+0x71fd48]
+V  [jvm.dll+0x321c14]
+V  [jvm.dll+0x70112c]
+V  [jvm.dll+0x392def]
+V  [jvm.dll+0x394e61]
+C  [jli.dll+0x524b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff85e053038, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000017ccd047800 GCTaskThread "GC Thread#0" [stack: 0x0000005a7f600000,0x0000005a7f700000] [id=12052]
+  0x0000017ccd052800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000005a7f700000,0x0000005a7f800000] [id=14064]
+  0x0000017ccd055000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000005a7f800000,0x0000005a7f900000] [id=17260]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff85d881257]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000017ccd012430] Heap_lock - owner thread: 0x0000017ccd018800
+
+Heap address: 0x00000000c3c00000, size: 964 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.123 Loaded shared library C:\Program Files\Java\jdk-14.0.2\bin\java.dll
+Event: 0.125 Loaded shared library C:\Program Files\Java\jdk-14.0.2\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6c6c80000 - 0x00007ff6c6c8f000 	C:\Program Files\Java\jdk-14.0.2\bin\java.exe
+0x00007ff8b3a70000 - 0x00007ff8b3c65000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8b2db0000 - 0x00007ff8b2e6e000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8b15c0000 - 0x00007ff8b1888000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8b14c0000 - 0x00007ff8b15c0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff893320000 - 0x00007ff893335000 	C:\Program Files\Java\jdk-14.0.2\bin\VCRUNTIME140.dll
+0x00007ff8aad30000 - 0x00007ff8aad48000 	C:\Program Files\Java\jdk-14.0.2\bin\jli.dll
+0x00007ff8b20a0000 - 0x00007ff8b214e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8b2bb0000 - 0x00007ff8b2c4e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff8b34e0000 - 0x00007ff8b357c000 	C:\Windows\System32\sechost.dll
+0x00007ff8b3230000 - 0x00007ff8b3355000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff8b3820000 - 0x00007ff8b39c1000 	C:\Windows\System32\USER32.dll
+0x00007ff892c60000 - 0x00007ff892efa000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff8b1970000 - 0x00007ff8b1992000 	C:\Windows\System32\win32u.dll
+0x00007ff8b1ab0000 - 0x00007ff8b1adb000 	C:\Windows\System32\GDI32.dll
+0x00007ff8b19a0000 - 0x00007ff8b1aad000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8b1180000 - 0x00007ff8b121d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8a9f00000 - 0x00007ff8a9f0a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8b2d80000 - 0x00007ff8b2db0000 	C:\Windows\System32\IMM32.DLL
+0x00007ff85f4a0000 - 0x00007ff85f53b000 	C:\Program Files\Java\jdk-14.0.2\bin\msvcp140.dll
+0x00007ff85d5d0000 - 0x00007ff85e0ee000 	C:\Program Files\Java\jdk-14.0.2\bin\server\jvm.dll
+0x00007ff8b2090000 - 0x00007ff8b2098000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff894c60000 - 0x00007ff894c69000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff896b40000 - 0x00007ff896b67000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff8b2c50000 - 0x00007ff8b2cbb000 	C:\Windows\System32\WS2_32.dll
+0x00007ff8af230000 - 0x00007ff8af242000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff893850000 - 0x00007ff89385a000 	C:\Program Files\Java\jdk-14.0.2\bin\jimage.dll
+0x00007ff8a0370000 - 0x00007ff8a0554000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff89a050000 - 0x00007ff89a07c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff8b18e0000 - 0x00007ff8b1962000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff8798d0000 - 0x00007ff8798f5000 	C:\Program Files\Java\jdk-14.0.2\bin\java.dll
+0x00007ff893300000 - 0x00007ff893316000 	C:\Program Files\Java\jdk-14.0.2\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-14.0.2\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Java\jdk-14.0.2\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 --module-path=C:\Users\dell\OneDrive\Documents\NetBeansProjects\SimpleQuiz\build\classes 
+java_command: simplequiz.SimpleQuiz
+java_class_path (initial): C:\Users\dell\OneDrive\Documents\NetBeansProjects\SimpleQuiz\build\classes
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 65011712                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1010827264                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1010827264                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_202
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Java\jdk1.8.0_202\BIN;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files\Java\jre1.8.0_202\bin;
+USERNAME=dell
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1466)
+OS uptime: 1 days 2:10 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 12, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 3853M (400M free)
+TotalPageFile size 15629M (AvailPageFile size 21M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 113M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (14.0.2+12-46) for windows-amd64 JRE (14.0.2+12-46), built on Jul  9 2020 00:35:52 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
